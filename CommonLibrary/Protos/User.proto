@@ -3,13 +3,13 @@ syntax = "proto3";
 option csharp_namespace = "CommonLibrary.Protos";
 
 service User {
-	rpc GetUserProfile (UserId) returns (UserProfile);
+	rpc GetUserProfile (GetUserProfileRequest) returns (UserProfile);
 }
 
-message UserId {
-	string Id = 1;
+message GetUserProfileRequest {
+	string id = 1;
 }
 
 message UserProfile {
-	string Username = 1;
+	string username = 1;
 }
