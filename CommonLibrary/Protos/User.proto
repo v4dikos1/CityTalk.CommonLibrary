@@ -4,6 +4,7 @@ option csharp_namespace = "CommonLibrary.Protos";
 
 service User {
 	rpc GetUserProfile (GetUserProfileRequest) returns (UserProfile);
+	rpc RegisterAccount (RegisterAccountRequest) returns (CreatedOrUpdatedResponse);
 }
 
 message GetUserProfileRequest {
@@ -12,4 +13,14 @@ message GetUserProfileRequest {
 
 message UserProfile {
 	string username = 1;
+}
+
+message RegisterAccountRequest {
+	bool is_business = 1;
+	optional string description = 2;
+	optional string path_to_profile_picture = 3;
+}
+
+message CreatedOrUpdatedResponse {
+	string id = 1;
 }
