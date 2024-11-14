@@ -44,7 +44,7 @@ message AccountResponse {
 
 message GetAccountsListRequest {
 	int limit = 1;
-	optional offset = 2;
+	optional int offset = 2;
 }
 
 message AccountsListRsponse {
