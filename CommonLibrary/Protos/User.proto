@@ -6,6 +6,7 @@ service User {
 	rpc GetUserProfile (GetUserProfileRequest) returns (UserProfile);
 	rpc RegisterAccount (RegisterAccountRequest) returns (CreatedOrUpdatedResponse);
 	rpc GetAccount (GetAccountRequest) returns (AccountResponse);
+	rpc GetAccountsListRequest (GetAccountsListRequest) returns (AccountsListRsponse);
 }
 
 message GetUserProfileRequest {
