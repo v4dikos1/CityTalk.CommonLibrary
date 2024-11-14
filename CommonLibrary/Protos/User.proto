@@ -17,8 +17,10 @@ message UserProfile {
 
 message RegisterAccountRequest {
 	bool is_business = 1;
-	optional string description = 2;
-	optional string path_to_profile_picture = 3;
+	string username = 2;
+	string email = 3;
+	string password = 4;
+	optional string path_to_profile_picture = 5;
 }
 
 message CreatedOrUpdatedResponse {
