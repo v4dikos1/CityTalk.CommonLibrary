@@ -26,3 +26,17 @@ message RegisterAccountRequest {
 message CreatedOrUpdatedResponse {
 	string id = 1;
 }
+
+message GetAccountRequest {
+	string external_user_id = 1;
+}
+
+message AccountResponse {
+	string id = 1;
+	string external_user_id = 2;
+	string type = 3;
+	optional string path_to_profile_picture = 4;
+	optional string descritpion = 5;
+	string created_at = 6;
+	string updated_at = 7;
+}
