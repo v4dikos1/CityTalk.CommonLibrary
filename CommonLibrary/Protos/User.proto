@@ -41,3 +41,12 @@ message AccountResponse {
 	string created_at = 6;
 	string updated_at = 7;
 }
+
+message GetAccountsListRequest {
+	int limit = 1;
+	optional offset = 2;
+}
+
+message AccountsListRsponse {
+	repeated AccountResponse accounts = 1;
+}
