@@ -13,23 +13,16 @@
     <Folder Include="Protos\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.28.3" />
-    <PackageReference Include="Grpc.Core" Version="2.46.6" />
-    <PackageReference Include="Grpc.Tools" Version="2.67.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
+	<ItemGroup>
+		<Protobuf Include="Protos\*.proto" GrpcServices="Both" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Update="Protos/*.proto">
-	  <Pack>true</Pack>
-	  <PackagePath>contentFiles\any\net8.0\</PackagePath>
-	</None>
-  </ItemGroup>
-
-  <ItemGroup>
-	<Protobuf Include="Protos\*.proto" />
-  </ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Google.Protobuf" Version="3.28.3" />
+	  <PackageReference Include="Grpc" Version="2.46.6" />
+	  <PackageReference Include="Grpc.Tools" Version="2.67.0">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	</ItemGroup>
 </Project>
